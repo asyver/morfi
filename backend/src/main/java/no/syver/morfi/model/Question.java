@@ -1,5 +1,6 @@
 package no.syver.morfi.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -8,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import no.syver.morfi.model.enums.QuestionType;
 
@@ -20,11 +23,13 @@ public class Question {
 
 	@ManyToOne
 	@JoinColumn(name = "page_id", nullable = false)
+	@JsonIgnore
 	private Page page;
 	 
 	private String name;
 
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.ORDINAL)
+	@Column(columnDefinition = "smallint")
 	private QuestionType questionType; 
 	
 	public Question() {

@@ -14,6 +14,7 @@ import no.syver.morfi.model.Form;
 import no.syver.morfi.model.Page;
 import no.syver.morfi.model.Question;
 import no.syver.morfi.model.enums.QuestionType;
+import no.syver.morfi.repository.FormRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MorfiApplication.class)

@@ -1,4 +1,4 @@
-package no.syver.morfi;
+package no.syver.morfi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

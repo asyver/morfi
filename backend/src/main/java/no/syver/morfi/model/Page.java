@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Page {
 
@@ -20,6 +22,7 @@ public class Page {
 
 	@ManyToOne
 	@JoinColumn(name = "form_id", nullable = false)
+	@JsonIgnore
 	private Form form;
 
 	@OneToMany(mappedBy="page")
