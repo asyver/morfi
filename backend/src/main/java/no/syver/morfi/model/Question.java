@@ -30,7 +30,7 @@ public class Question {
 
 	@Enumerated(EnumType.ORDINAL)
 	@Column(columnDefinition = "smallint")
-	private QuestionType questionType; 
+	private QuestionType questionType;
 	
 	public Question() {
 		
